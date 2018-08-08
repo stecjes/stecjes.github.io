@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset='utf-8' />
+<meta name="description" content="Archiefpagina van het Sint-Teresiacollege, Eksaarde-dorp 1A, 9160 Eksaarde" />
+<meta name="keywords" content="Sint-Teresiacollege, Eksaarde, school, onderwijs, vlot, stc, vlot-stc.be, vlot!, Lokerse scholen, Lokeren" />
+<meta name="author" content="Geert De Saegher">
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+<title>VLOT! Campus Sint-Teresiacollege</title>
+<script>
+/*Artikel id's*/
+var ids={"_377":"2017_15","_376":"2017_14","_375":"2017_13","_374":"2017_12","_373":"2017_11","_372":"2017_10","_370":"2017_9","_369":"2017_8","_368":"2017_7","_367":"2017_6","_366":"2017_5","_365":"2017_4","_364":"2017_3","_363":"2017_2","_362":"2017_1","_360":"2016_16","_359":"2016_15",
+"_360":"2016_16","_359":"2016_15","_358":"2016_14","_357":"2016_13","_356":"2016_12","_355":"2016_11","_353":"2016_10","_352":"2016_9","_351":"2016_8","_349":"2016_7","_348":"2016_6","_347":"2016_5","_346":"2016_4","_345":"2016_3","_344":"2016_2","_343":"2016_1",
+"_342":"2015_16","_Vlot!-1":"2015_15","_339":"2015_14","_338":"2015_13","_337":"2015_12","_336":"2015_11","_335":"2015_10","_334":"2015_9","_333":"2015_8","_332":"2015_7","_329":"2015_6","_328":"2015_5","_327":"2015_4","_326":"2015_3","_324":"2015_2","_323":"2015_1",
+"_325":"2014_18","_322":"2014_17","_320":"2014_16","_319":"2014_15","_318":"2014_14","_317":"2014_13","_315":"2014_12","_314":"2014_11","_313":"2014_10","_304":"2014_9","_302":"2014_8","_301":"2014_7","_300":"2014_6","_299":"2014_5","_298":"2014_4","_296":"2014_3","_295":"2014_2","_294":"2014_1",
+"_293":"2013_15","_292":"2013_14","_290":"2013_13","_289":"2013_12","_288":"2013_11","_287":"2013_10","_286":"2013_9","_283":"2013_8","_279":"2013_7","_277":"2013_6","_276":"2013_5","_275":"2013_4","_274":"2013_3","_273":"2013_2","_272":"2013_1",
+"_270":"2012_11","_269":"2012_10","_267":"2012_9","_266":"2012_8","_265":"2012_7","_263":"2012_6","_259":"2012_5","_230":"2012_4","_229":"2012_3","_228":"2012_0","_227":"2012_2","_226":"2012_1",
+"_192":"2010_13","_191":"2010_12","_189":"2010_11","_188":"2010_10","_187":"2010_0","_185":"2010_9","_184":"2010_8","_183":"2010_7","_182":"2010_6","_180":"2010_5","_179":"2010_4","_178":"2010_3","_177":"2010_2","_176":"2010_1",
+"_175":"2009_12","_174":"2009_11","_162":"2009_10","_160":"2009_9","_159":"2009_8","_158":"2009_7","_156":"2009_6","_154":"2009_5","_153":"2009_4","_151":"2009_3","_150":"2009_2","_148":"2009_1",
+"_147":"2008_15","_146":"2008_14","_145":"2008_13","_139":"2008_12","_141":"2008_11","_140":"2008_10","_138":"2008_9","_137":"2008_8","_135":"2008_7","_134":"2008_6","_130":"2008_5","_99":"2008_4","_94":"2008_3","_77":"2008_2","_58":"2008_1",
+"_41":"2007_10","_32":"2007_9","_31":"2007_8","_30":"2007_7","_29":"2007_6","_28":"2007_5","_27":"2007_4","_26":"2007_3","_23":"2007_2","_22":"2007_1",
+"_40":"2006_10","_39":"2006_9","_38":"2006_8","_37":"2006_7","_36":"2006_6","_35":"2006_5","_34":"2006_4","_21":"2006_3","_20":"2006_2","_19":"2006_1",
+"_55":"2005_11","_54":"2005_10","_53":"2005_9","_52":"2005_8","_51":"2005_7","_50":"2005_6","_49":"2005_5","_48":"2005_4","_47":"2005_3","_46":"2005_2","_45":"2005_1",
+"_76":"2004_14","_75":"2004_13","_74":"2004_12","_73":"2004_11","_72":"2004_10","_71":"2004_9","_70":"2004_8","_68":"2004_7","_69":"2004_6","_67":"2004_5","_66":"2004_4","_65":"2004_3","_64":"2004_2","_63":"2004_1",
+"_92":"2003_14","_91":"2003_13","_90":"2003_12","_89":"2003_11","_88":"2003_10","_87":"2003_9","_86":"2003_8","_85":"2003_7","_84":"2003_6","_83":"2003_5","_82":"2003_4","_81":"2003_3","_80":"2003_2","_79":"2003_1",
+"_129":"2002_22","_128":"2002_21","_127":"2002_20","_126":"2002_19","_125":"2002_18","_124":"2002_17","_123":"2002_16","_122":"2002_15","_121":"2002_14","_120":"2002_13","_119":"2002_12","_118":"2002_11","_117":"2002_10","_116":"2002_9","_115":"2002_8","_114":"2002_7","_113":"2002_6","_112":"2002_5","_111":"2002_4","_110":"2002_3","_97":"2002_2","_96":"2002_1",
+/*FQ id's*/
+"_371":"2018q","_FQ2018.pdf":"2018q","_350":"2017q","_FQ2017.pdf":"2017q","_331":"2016q","_FQ2016.pdf":"2016q","_316":"2015q","_FQ2015.pdf":"2015q","_284":"2014q","_FQ2014.pdf":"2014q","_264":"2013q","_FQ2013.pdf":"2013q","_197":"2012q","_FQ2012.pdf":"2012q","_186":"2011q","_FQ2011.pdf":"2011q","_157":"2010q","_FQ2010.pdf":"2010q","_136":"2009q","_FQ2009.pdf":"2009q","_109":"2008q","_FQ2008.pdf":"2008q","_108":"2007q","_FQ2007.pdf":"2007q","_107":"2006q","_FQ2006.pdf":"2006q","_106":"2005q","_FQ2005.pdf":"2005q","_105":"2004q","_FQ2004.pdf":"2004q","_104":"2003q","_FQ2003.pdf":"2003q","_103":"2002q","_FQ2002.pdf":"2002q","_102":"2001q","_FQ2001.pdf":"2001q","_101":"2000q","_FQ2000.pdf":"2000q","_100":"1999q","_FQ1999.pdf":"1999q"}
+function getParameterByName(name, url) {
+ if (!url) url = window.location.href;
+ name = name.replace(/[\[\]]/g, '\\$&');
+ var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),results = regex.exec(url);
+ if (!results) return null;
+ if (!results[2]) return '';
+ return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+window.onload=function(){
+ var id,page;
+ id=getParameterByName("id");
+ if(id!=null){
+  page=ids["_"+id.split(":")[0]];
+  if(page!=undefined){
+   window.location.replace("http://archief.sint-teresiacollege.be/?page="+page);
+   return;
+  }
+ }
+ document.getElementById('gs_content').style.display = 'block';
+};
+</script>
+</head>
+<body style="background-image:url('img/hartstc-logo_t.png');background-color:#3b3b3b;font-family:arial,helvetica,sans-serif;">
+<div id="gs_content" style="display:none;top:50%;left:50%;-webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);position:fixed;margin:auto;min-width:450px;max-width:600px;">
+<div style="background-color:white;color:black;width:100%;border:none;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;">
+<table style="width:100%;"><tr>
+<td><a href="http://www.vlot-stc.be" target="_blank"><img style="width:203px;border-style:none;" src="img/logo_vlot.jpg" /></a></td>
+<td style="padding:10px;">Voor actuele informatie over VLOT!&nbsp;Campus&nbsp;STC kun je voortaan alleen nog terecht op onze <b>VLOT!&#8209;webstek</b> via 
+<a style="text-decoration-color:black;color:black;" href="http://www.vlot-stc.be" target="_blank"><b>www.vlot&#8209;stc.be</b></a>.</td>
+</tr></table>
+</div>
+<div style="margin-top:40px;background-color:rgb(0,102,0);color:white;width:100%;border:none;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;">
+<table style="width:100%;"><tr>
+<td><a href="http://archief.sint-teresiacollege.be"><img style="border-style:none;-webkit-border-radius: 100px;-moz-border-radius: 100px;border-radius: 100px;" src="img/hartstc.jpg" /></a></td>
+<td style="padding:10px;">Als je op zoek bent naar een leuke herinnering aan het Sint-Teresiacollege (Eksaarde) uit de periode 1998&#8209;2018, bezoek dan zeker onze <b>archiefpagina</b> via
+<a style="text-decoration-color:white;color:white;" href="http://archief.sint-teresiacollege.be"><b>archief.sint&#8209;teresiacollege.be</b></a>.</td>
+</tr></table>
+</div>
+<div style="margin-top:40px;background-color:black;color:white;width:100%;border:none;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;">
+<table style="width:100%;"><tr>
+<td style="width:25%;padding-left:10px;">
+<a href="https://www.facebook.com/STC.Eksaarde" target="_blank" title="Facebook"><img src="img/facebook.png" style="border-style:none;" /></a>
+ &nbsp;<a href="https://www.youtube.com/user/stecjes" target="_blank" title="YouTube"><img src="img/youtube.png" style="border-style:none;" /></a>
+</td>
+<td style="width:50%;text-align:center;"><small>&copy; 1998-2018 Sint-Teresiacollege Eksaarde</small></td>
+<td style="width:25%;text-align:right;padding-right:10px;"><small>Bezoekers:
+<!-- Statcounter code for Landingspagina STC
+http://sint-teresiacollege.be on Joomla -->
+<script type="text/javascript">
+var sc_project=11782500; 
+var sc_invisible=0; 
+var sc_security="bbdde488"; 
+var sc_text=5;
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - StatCounter" href="http://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11782500/0/bbdde488/0/" alt="Web
+Analytics Made Easy - StatCounter"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</small></td>
+</tr></table>
+</div>
+</div>
+</body>
+</html>
