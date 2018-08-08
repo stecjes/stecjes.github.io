@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+<title>STC Fotoalbum 4des 2001-2005</title>
+<link rel='stylesheet' href='css/halkaBox.min.css' />
+<script src='js/halkaBox.min.js'></script>
+<style>
+body {font-family:arial,helvetica,sans-serif;}
+table.gs_form tr td:first-child {text-align:right;vertical-align:top;width:200px;}
+table.gs_form tr td:last-child {text-align:left;vertical-align:top;}
+input.gs_form,textarea.gs_form {width:200px;}
+input.gs_form_spm {display:none;}
+.hb-single img {background-color:white;border:lightgray solid 1px;padding:4px;}
+.titlephoto img {float:left;margin-right:5px;margin-bottom:5px;}
+.gs_list td {padding:4px 5px;}
+.gs_list_c1 {text-align:right;font-weight: bold;}
+</style>
+<script type='text/javascript'>
+/*<![CDATA[*/
+function validateEmail(email) {
+ var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+ return re.test(String(email).toLowerCase());
+}
+function gs_submit(event){
+ if(document.forms['gs_form']['password'].value){return false;}
+ var name=String(document.forms['gs_form']['name'].value).trim();
+ var email=String(document.forms['gs_form']['email'].value).trim();
+ if(!name){alert('Voer je naam in!');return false;}
+ if(email){if(!validateEmail(email)){alert('Ongeldig e-mailadres!');return false;}}
+ document.getElementById('gs_formwait').innerHTML='<b>Even geduld, je verzoek wordt verzonden...</b>';
+ document.getElementById('gs_form').style.display = 'none';
+ document.getElementById('gs_formwait').style.display = 'block';
+ var id='AKfycbzctYanHLu-YH4sazYdPNMgv7PxewU_v3uh2v8SGpw1x5-SGFnw';
+ var url='https://script.google.com/macros/s/'+id+'/exec';
+ if (window.XMLHttpRequest){var xhr=new XMLHttpRequest();}else{var xhr=new ActiveXObject('Microsoft.XMLHTTP');}
+ xhr.open('POST', url);
+ //xhr.withCredentials = true;
+ xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+ xhr.onreadystatechange = function() {
+  if(xhr.readyState === 4) {
+   if(xhr.status === 200) {
+    var res=JSON.parse(xhr.responseText);
+    if(res.result=='success'){
+     var res2=JSON.parse(res.data);
+     if(window.sessionStorage){window.sessionStorage.setItem(res2.year[0],true);}
+     document.getElementById('gs_formwait').style.display = 'none';
+     document.getElementById('gs_fotolinks').style.display = 'block';
+     return;
+    }
+   }
+   document.getElementById('gs_formwait').innerHTML='<b>Verzoek mislukt. Probeer opnieuw...</b>';
+   document.getElementById('gs_form').style.display = 'block';
+  }
+ };
+ var t=new Date();
+ var d=encodeURIComponent('name') + '=' + encodeURIComponent(name);
+ d+='&'+encodeURIComponent('email') + '=' + encodeURIComponent(email);
+ d+='&'+encodeURIComponent('message') + '=' + encodeURIComponent(document.forms['gs_form']['message'].value);
+ d+='&'+encodeURIComponent('year') + '=' + encodeURIComponent(document.forms['gs_form']['year'].value);
+ d+='&'+encodeURIComponent('date') + '=' + encodeURIComponent(t.toLocaleString());
+ xhr.send(d);
+ return false;
+}
+function gs_checksubmitted(y) {
+ if(window.sessionStorage){
+  if(window.sessionStorage.getItem(y)){
+   document.getElementById('gs_form').style.display = 'none';
+   document.getElementById('gs_fotolinks').style.display = 'block';
+   return true;
+  };
+ }
+ document.getElementById('gs_form').style.display = 'block';
+ return false;
+}
+function httpGet(art){
+ window.location.href=art+'.html';
+ return false;
+}
+window.onload=function () {
+halkaBox.options({animation: 'fade',theme: 'dark',hideButtons: true, preload: 2});
+halkaBox.run("hb-single");
+gs_checksubmitted('2001-2005');
+};
+/*]]>*/
+</script>
+</head>
+<body>
+<h2>STC Fotoalbum 4des 2001-2005</h2>
+<p><a href="https://lh3.googleusercontent.com/3MKHT8h6KBwVbK2um6XIcjVGk1v2sv5-N_8KdHPD9Ms7je5VzW2MD2GxKropV8O0tSF5R8_X1vM8x-NCIgQC0DSMiSYJ1KCMBHdqn0tLV0BrH9YNlcWZ8gLancXhF8zvYHBrLVJfEqg=w0" class='hb-single titlephoto'><img src="https://lh3.googleusercontent.com/3MKHT8h6KBwVbK2um6XIcjVGk1v2sv5-N_8KdHPD9Ms7je5VzW2MD2GxKropV8O0tSF5R8_X1vM8x-NCIgQC0DSMiSYJ1KCMBHdqn0tLV0BrH9YNlcWZ8gLancXhF8zvYHBrLVJfEqg=w250" alt='STC Fotoalbum 4des 2001-2005' /></a>
+<br />Beste oud-leerling(e) uit de periode 2001-2005.<br /><br />
+Ben je je originele foto cd-rom (of dvd) kwijt, of kun je hem niet (meer) afspelen, dan heb je hier de mogelijkheid om de foto's online te bekijken en eventueel één of meerdere foto's te downloaden via Google Foto's.<br /><br />
+Aanvullend kun je nog een aantal foto's, die je niet terugvindt op de originele cd of dvd, van de dropping en afscheidsviering bekijken en/of downloaden.<br /><br />
+<br /><form style='display:none;' id='gs_form' method='POST' onsubmit='return gs_submit();'>
+Vul onderstaand formulier in om toegang te krijgen tot deze foto's.<br /><br />
+<table class='gs_form'>
+ <tr><td>Je naam:</td><td><input id='name' name='name' type='text' required='required' class='gs_form'/></td></tr>
+ <tr><td>Je e-mailadres:</td><td><input id='email' name='email' type='email' class='gs_form' value=''/></td></tr>
+ <tr><td>Je (eventuele) reactie kun je hier kwijt:</td><td><textarea id='message' name='message' rows='10' class='gs_form'></textarea></td></tr>
+ <tr><td><input id='password' name='password' type='password' class='gs_form_spm' /></td><td><input id='year' name='year' type='hidden' value='2001-2005'/>
+ <input type='submit' value='Verzenden'/>
+ <input type='reset' value='Wissen'/></td></tr>
+</table>
+</form>
+<div style='display:none' id='gs_formwait'></div>
+<div style='display:none;' id='gs_fotolinks'>
+Klik op één van onderstaande links.<br /><br />
+<a href='#2004_4o' onclick='httpGet("2004_4o")'>Bekijk de foto's uit de originele cd-rom (of dvd).</a><br />
+<a href='https://photos.app.goo.gl/ubfcm62c6GPyZoid9' target='_blank'>Bekijk en/of download de foto's uit de originele cd-rom (of dvd) via Google Foto's.</a><br />
+<br /><a href='#2004_4a' onclick='httpGet("2004_4a")'>Bekijk de foto's uit de aanvulling.</a><br />
+<a href='https://photos.app.goo.gl/CFSwTUBWnyitAckSA' target='_blank'>Bekijk en/of download de foto's uit de aanvulling via Google Foto's.</a><br />
+<div class='gs_windowspc'><br />
+Heb je een Windows-pc, dan kun je een bestand downloaden dat de foto's uit de aanvulling installeert op je computer, waarop reeds de toepassing STC Fotoalbum staat.<br />
+Na installatie kun je de foto's, via een aangemaakte snelkoppeling in het startmenu, met de toepassing STC Fotoalbum bekijken.<br />
+In datzelfde menu zul je ook een snelkoppeling terugvinden die verwijst naar een werkwijze om een nieuwe fotoalbum-cd/dvd te maken, die de foto's van de oude fotoalbum-cd/dvd en de foto's uit de aanvulling bevat.<br /><br />
+<a href='fotoalbum/01-05/setup.exe'>Download het installatieprogramma.</a>
+</div>
+</div>
+</p>
+</body>
+</html>

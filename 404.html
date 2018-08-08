@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset='utf-8' />
+<title>Archief Sint-Teresiacollege Eksaarde</title>
+<script>
+var query=window.location.search;
+if(query){
+ window.location.replace("http://archief.sint-teresiacollege.be/index.html"+query);
+} 
+else{
+ var id=window.location.href.split('/').pop().split('-')[0];
+ if(id=="index.php"){
+  window.location.replace("http://archief.sint-teresiacollege.be/index.html");
+ }
+ else{
+  window.location.replace("http://archief.sint-teresiacollege.be/index.html?id="+id);
+ }
+}
+</script>
+</head>
+<body></body>
+</html>

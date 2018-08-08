@@ -1,0 +1,9 @@
+.hb-single img {background-color:white;border:lightgray solid 1px;padding:4px;}
+.titlephoto img {float:left;margin-right:5px;margin-bottom:5px;}
+.wrapper {margin: 10px auto 0px auto;max-width: 800px;}
+.gallery {text-align: center;}
+.gallery a {display:inline-block;vertical-align:middle;margin:0;padding:0;}
+.gallery br {display:none;}
+.gallery img {background-color:white;border:black solid 1px;width:117px;padding:4px;-webkit-box-shadow:4px 4px 2px 0 RGBA(64,64,64,0.75);-moz-box-shadow:4px 4px 2px 0 rgba(64,64,64,0.75);box-shadow:4px 4px 2px 0 rgba(64,64,64,0.75);}
+.browse span {cursor:pointer;}
+.browse {text-align:right;}
